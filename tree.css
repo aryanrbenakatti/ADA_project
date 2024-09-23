@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #1e3a8a; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    margin-bottom: 20px;
+}
+
+label {
+    color: #1e3a8a; /* Dark blue */
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #93c5fd; /* Light blue */
+    background-color: #e0f2fe; /* Very light blue */
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #3b82f6; /* Medium blue */
+    color: #fff; /* White */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb; /* Darker blue */
+}
+
+#tree-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+}
+
+.tree li {
+    position: relative;
+    margin: 20px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    height: 20px;
+    left: 50%;
+}
+
+.tree li::after {
+    border-left: 1px solid #ccc;
+    left: 50%;
+}
+
+.tree li:only-child::before, .tree li:only-child::after {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.tree li a {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-decoration: none;
+    color: #1e3a8a; /* Dark blue */
+    background-color: #fff;
+    border-radius: 50%; /* Circular nodes */
+    display: inline-block;
+    transition: all 0.5s;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.tree li a:hover {
+    border: 2px solid #2563eb; /* Darker blue */
+    color: #000;
+    background-color: #e0f2fe; /* Very light blue */
+}
+
+.tree li a.match {
+    border: 2px solid #3b82f6; /* Medium blue */
+    color: #3b82f6; /* Medium blue */
+    font-weight: bold;
+}
